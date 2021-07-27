@@ -8,3 +8,4 @@ for(int i=0;i<B.size()-1;i++){
     max = B[i+1]-B[i];
 }
 return max;
+}
