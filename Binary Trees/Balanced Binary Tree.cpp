@@ -8,10 +8,12 @@
  * };
  */
 int solve(TreeNode* A){
+    int l,r;
     if(!A) return 0;
-    int l = solve(A->left);
-    int r = solve(A->right);
-    if(l==-1 || r==-1) return 0;
+    l = solve(A->left);
+    if(l==-1) return -1;
+    r = solve(A->right);
+    if(r==-1) return -1;
     if(abs(l-r)>1) return -1;
     return 1+max(l,r);
 }
